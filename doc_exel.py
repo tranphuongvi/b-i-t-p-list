@@ -1,39 +1,39 @@
 import pandas as pd
 import numpy
 import openpyxl
-df = pd.read_excel("D:/Dataset/Dataset/Book1_Temperature.xlsx")
-print(df,'\n')
+data = pd.read_excel("D:/Dataset/Dataset/Book1_Temperature.xlsx")
+print(data,'\n')
 
 
 # In ra tổng số dòng dữ liệu có trong file dữ liệu
-row_nums = len(df.iloc[:,0])
+row_nums = len(data.iloc[:,0])
 print('Tổng số dòng dữ liệu có trong file: ',row_nums)
 
 # Lấy dữ liệu của cột thứ 4
-col3 = df.iloc[:,3]
+col3 = data.iloc[:,3]
 print(col3)
 
 # Lấy giá trị của một ô dữ liệu bất kì
-pos = df.iloc[4,2]
+pos = data.iloc[4,2]
 print(pos)
 
 # Lấy cột dữ liệu của Temperature bằng cách gọi tên cột
-lay_cot = Temperature["Temperature"]
+lay_cot = data["Temperature"]
 print(lay_cot)
 
 # Hiển thị ra các giá trị chứa giá trị NA ra màn hình (hiển thị là True)
-missing_values = temperature.isna()
+missing_values = data.isna()
 
 # Tính tổng của cột nhiệt độ và bỏ qua các hàng có chứa giá trị NA
-sum_value = temperature["Temperature"].sum(skipna=True)
+sum_value = data["Temperature"].sum(skipna=True)
 print(sum_value)
 
 # TÍnh giá trị trung bình của cột nhiệt độ bằng cách lấy tổng chia cho số lượng của cột nhiệt độ
-mean_value = (sum_value) / len(temperature["Temperature"])
+mean_value = (sum_value) / len(data["Temperature"])
 print(mean_value)
 # Tính giá trị lớn, nhỏ nhất trong cột temperature theo năm
-max_salinity_by_year = df.groupby('Year')['Salinity'].max()
-min_salinity_by_year = df.groupby('Year')['Salinity'].min()
+max_salinity_by_year = data.groupby('Year')['Salinity'].max()
+min_salinity_by_year = data.groupby('Year')['Salinity'].min()
 # In giá trị lớn nhất
 print(max_salinity_by_year)
 print(min_salinity_by_year)
